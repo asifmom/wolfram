@@ -8,7 +8,7 @@ module Wolfram
     end
 
     attr_accessor :input, :options, :appid, :query_uri
-    def initialize(input, options = {})
+    def initialize(input, options = {:format=>"mathml"})
       @input = input
       @appid = options.delete(:appid) || Wolfram.appid || raise("No APPID set")
       @query_uri = options.delete(:query_uri) || Wolfram.query_uri
