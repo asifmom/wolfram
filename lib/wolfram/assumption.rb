@@ -6,7 +6,7 @@ module Wolfram
 
     delegate :[], :each, :to => :values
 
-    def self.collection(xml, options = {})
+    def self.collection(xml, options = {:format=>"mathml"})
       Nokogiri::XML(xml.to_s).search('assumptions').search('assumption').map {|a_xml| new(a_xml, options)}
     end
 

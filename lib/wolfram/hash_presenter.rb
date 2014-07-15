@@ -17,7 +17,7 @@ module Wolfram
 
     def pods_to_hash
       pods.inject Hash.new do |hash, pod|
-        hash.update pod.title => pod.subpods.map(&:plaintext)
+        hash.update pod.title => pod.subpods.map(&:mathml)
       end
     end
 
