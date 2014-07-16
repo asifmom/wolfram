@@ -46,5 +46,10 @@ module Wolfram
     def format
       @query && @query.options[:format]
     end
+
+    def alternate_form_mathsml
+      @xml.xpath("//pod[@id='AlternateForm']/subpod/mathml").to_xml
+    end
+
   end
 end

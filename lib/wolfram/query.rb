@@ -30,7 +30,7 @@ module Wolfram
     end
 
     def params
-      options.merge(:input => input, :appid => appid)
+      options.merge(:input => input, :appid => appid, :format=> "mathml")
     end
 
     def inspect
